@@ -17,9 +17,9 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-            <div className="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex justify-between items-center border !border-gray-300/50">
                 <Link href="/" className="text-2xl font-display font-bold tracking-tighter text-primary">
-                    DOMI<span className="text-white">BGA</span>
+                    DOMI<span className="text-black">BGA</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -28,12 +28,12 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                            className="text-sm font-bold uppercase tracking-widest text-black hover:text-primary transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <button className="bg-primary text-black px-6 py-2 font-bold uppercase hover:bg-accent transition-colors clip-path-slant">
+                    <button className="bg-primary text-black px-6 py-2 font-bold uppercase hover:bg-accent transition-colors rounded-full">
                         Únete Ahora
                     </button>
                 </div>
@@ -66,7 +66,7 @@ export default function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <button className="bg-primary text-black w-full py-3 font-bold uppercase hover:bg-accent transition-colors">
+                        <button className="bg-primary text-black w-full py-3 font-bold uppercase hover:bg-accent transition-colors rounded-full">
                             Únete Ahora
                         </button>
                     </motion.div>

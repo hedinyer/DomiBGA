@@ -49,13 +49,11 @@ export default function Hero() {
 
         video.playsInline = true;
         video.muted = true;
-        video.defaultMuted = true;
         video.autoplay = true;
         video.loop = true;
         video.controls = false;
 
         video.muted = true;
-        video.defaultMuted = true;
         video.setAttribute("muted", "muted");
 
         const playPromise = video.play();
@@ -111,7 +109,6 @@ export default function Hero() {
                 autoPlay
                 loop
                 muted
-                defaultMuted
                 controls={false}
                 playsInline
                 disablePictureInPicture

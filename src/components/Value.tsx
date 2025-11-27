@@ -37,7 +37,6 @@ export default function Value() {
                     autoPlay
                     loop
                     muted
-                    defaultMuted
                     playsInline
                     disablePictureInPicture
                     className="w-full h-full object-cover"

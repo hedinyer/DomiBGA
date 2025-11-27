@@ -5,18 +5,18 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, Cartes
 import { Shield, Lock, EyeOff, ArrowRight, AlertTriangle, BarChart3, CheckCircle } from "lucide-react";
 
 const data = [
-    { name: "Otros", profit: 7000, fees: 3000, commission: "30%" },
-    { name: "DomiBGA", profit: 9500, fees: 500, commission: "5%" },
+    { name: "Otros", profit: 7000, fees: 3000, commission: "70%" },
+    { name: "DomiBGA", profit: 9500, fees: 500, commission: "95%" },
 ];
 
 export default function Problem() {
     return (
-        <section id="mission" className="relative sm:mt-16 mt-12 max-w-[98vw] lg:max-w-[95vw] xl:max-w-7xl mx-auto px-2 sm:px-3">
-            <div className="relative overflow-hidden glass rounded-3xl mr-0 ml-0">
+        <section id="mission" className="relative sm:mt-16 mt-12 max-w-[98vw] lg:max-w-[95vw] xl:max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
+            <div className="relative overflow-hidden glass rounded-2xl sm:rounded-3xl mr-0 ml-0">
                 {/* Hover effects */}
                 <div className="absolute inset-y-0 -inset-x-16 sm:-inset-x-24 md:-inset-x-32 lg:-inset-x-40 xl:-inset-x-48 2xl:-inset-x-64 bg-transparent" />
 
-                <div className="sm:p-10 pt-6 pr-6 pb-6 pl-6">
+                <div className="sm:p-8 md:p-10 pt-4 sm:pt-6 pr-4 sm:pr-6 pb-4 sm:pb-6 pl-4 sm:pl-6">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <motion.h3 
                             className="text-2xl font-semibold tracking-tight text-white"
@@ -40,10 +40,10 @@ export default function Problem() {
                     </div>
 
                     {/* Three feature cards */}
-                    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 items-stretch">
+                    <div className="mt-4 sm:mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 items-stretch">
                         {/* Card 1: Problem - Traditional Platforms */}
                         <motion.div 
-                            className="max-w-xl w-full flex flex-col min-h-[450px] xs:min-h-[500px] sm:min-h-[550px] md:aspect-[3/5] lg:aspect-[3/5] hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 ease-out group relative overflow-hidden rounded-xl sm:rounded-[2rem] p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 justify-between text-white morph-border shader-noise"
+                            className="max-w-xl w-full flex flex-col min-h-[400px] xs:min-h-[450px] sm:min-h-[500px] md:min-h-[550px] md:aspect-[3/5] lg:aspect-[3/5] hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 ease-out group relative overflow-hidden rounded-xl sm:rounded-[2rem] p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 justify-between text-white morph-border shader-noise"
                             initial={{ opacity: 0, y: 30, rotateX: -5 }}
                             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                             viewport={{ once: true }}
@@ -135,7 +135,7 @@ export default function Problem() {
                                                     viewport={{ once: true }}
                                                     transition={{ delay: 0.8, type: "spring" }}
                                                 >
-                                                    $100.00
+                                                    $100.000
                                                 </motion.span>
                                             </div>
                                             
@@ -163,7 +163,7 @@ export default function Problem() {
                                                     }}
                                                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                                                 >
-                                                    -$30.00
+                                                    -$30.0000
                                                 </motion.span>
                                             </motion.div>
                                             
@@ -177,7 +177,7 @@ export default function Problem() {
                                                     viewport={{ once: true }}
                                                     transition={{ delay: 1, type: "spring", stiffness: 200 }}
                                                 >
-                                                    $70.00
+                                                    $70.000
                                                 </motion.span>
                                             </div>
                                         </div>
@@ -297,7 +297,7 @@ export default function Problem() {
                                 >
                                     <div className="relative border border-blue-600/20 p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl bg-blue-50/50 backdrop-blur-xl shadow-2xl overflow-hidden">
                                         <div className="relative z-10 space-y-2 sm:space-y-2.5 md:space-y-3">
-                                            <div className="w-full" style={{ height: '160px' }}>
+                                            <div className="w-full" style={{ height: '120px', minHeight: '120px' }}>
                                                 <ResponsiveContainer width="100%" height="100%">
                                             <BarChart 
                                                 data={data} 
@@ -353,7 +353,7 @@ export default function Problem() {
                                                     }}
                                                     labelStyle={{ color: '#60a5fa', fontWeight: 600, marginBottom: '6px', fontSize: '13px' }}
                                                     itemStyle={{ color: '#fff', fontSize: '14px' }}
-                                                    formatter={(value: number) => [`$${value.toLocaleString()}`, 'Ganancia']}
+                                                    formatter={(value: number) => [`$${value.toLocaleString('es-CO')}`, 'Ganancia']}
                                                 />
                                                 <Bar 
                                                     dataKey="profit" 
@@ -423,14 +423,14 @@ export default function Problem() {
                                 transition={{ duration: 0.7, delay: 0.7 }}
                             >
                                 <p className="leading-relaxed text-[10px] sm:text-xs text-neutral-700 font-light">
-                                    Comparación basada en <span className="font-semibold text-blue-900">$10k de ventas mensuales</span>. DomiBGA te permite quedarte con más de tus ganancias.
+                                    Comparación basada en <span className="font-semibold text-blue-900">$10.000.000 de ventas mensuales</span>. DomiBGA te permite quedarte con más de tus ganancias.
                                 </p>
                                 <div className="flex flex-col xs:flex-row justify-between items-stretch xs:items-center gap-2 xs:gap-3 pt-1.5 sm:pt-2">
                                     <motion.div 
                                         className="flex items-center justify-center xs:justify-start gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 bg-blue-100/50 rounded-full border border-blue-600/30 w-full xs:w-auto"
                                         whileHover={{ scale: 1.05, borderColor: "rgba(30, 58, 138, 0.5)" }}
                                     >
-                                        <span className="text-[9px] xs:text-[10px] tracking-wide sm:tracking-wider font-bold text-blue-900 whitespace-nowrap">$10K MENSUALES</span>
+                                        <span className="text-[9px] xs:text-[10px] tracking-wide sm:tracking-wider font-bold text-blue-900 whitespace-nowrap">$10M MENSUALES</span>
                                         <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-blue-700 flex-shrink-0" />
                                     </motion.div>
                                     <motion.a 
@@ -447,7 +447,7 @@ export default function Problem() {
 
                         {/* Card 3: Solution - DomiBGA */}
                         <motion.div 
-                            className="max-w-xl w-full flex flex-col min-h-[450px] xs:min-h-[500px] sm:min-h-[550px] md:aspect-[3/5] lg:aspect-[3/5] hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 ease-out group relative overflow-hidden rounded-xl sm:rounded-[2rem] p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 justify-between text-white morph-border shader-noise"
+                            className="max-w-xl w-full flex flex-col min-h-[400px] xs:min-h-[450px] sm:min-h-[500px] md:min-h-[550px] md:aspect-[3/5] lg:aspect-[3/5] hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 ease-out group relative overflow-hidden rounded-xl sm:rounded-[2rem] p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 justify-between text-white morph-border shader-noise"
                             initial={{ opacity: 0, y: 30, rotateX: -5 }}
                             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                             viewport={{ once: true }}
@@ -539,7 +539,7 @@ export default function Problem() {
                                                     viewport={{ once: true }}
                                                     transition={{ delay: 0.8, type: "spring" }}
                                                 >
-                                                    $100.00
+                                                    $100.000
                                                 </motion.span>
                                         </div>
                                             
@@ -567,7 +567,7 @@ export default function Problem() {
                                                     }}
                                                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                                                 >
-                                                    -$5.00
+                                                    -$5.000
                                                 </motion.span>
                                             </motion.div>
                                             
@@ -581,7 +581,7 @@ export default function Problem() {
                                                     viewport={{ once: true }}
                                                     transition={{ delay: 1, type: "spring", stiffness: 200 }}
                                                 >
-                                                    $95.00
+                                                    $95.000
                                                 </motion.span>
                                         </div>
                                         </div>
@@ -622,15 +622,15 @@ export default function Problem() {
                     </div>
 
                     {/* Copy matching the rest of the page */}
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            <h4 className="text-lg font-semibold tracking-tight text-white">Sin Comisiones Abusivas</h4>
-                            <p className="mt-2 text-sm text-neutral-400">Las plataformas tradicionales desangran tu negocio con tarifas del 30%. Tú cocinas, ellos se comen tus márgenes.</p>
+                            <h4 className="text-base sm:text-lg font-semibold tracking-tight text-white">Sin Comisiones Abusivas</h4>
+                            <p className="mt-2 text-xs sm:text-sm text-neutral-400">Las plataformas tradicionales desangran tu negocio con tarifas del 30%. Tú cocinas, ellos se comen tus márgenes.</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -638,8 +638,8 @@ export default function Problem() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.5 }}
                         >
-                            <h4 className="text-lg font-semibold tracking-tight text-white">Pagos Directos</h4>
-                            <p className="mt-2 text-sm text-neutral-400">Sin intermediarios. DomiBGA restaura el equilibrio de poder para restaurantes y repartidores.</p>
+                            <h4 className="text-base sm:text-lg font-semibold tracking-tight text-white">Pagos Directos</h4>
+                            <p className="mt-2 text-xs sm:text-sm text-neutral-400">Sin intermediarios. DomiBGA restaura el equilibrio de poder para restaurantes y repartidores.</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -647,8 +647,8 @@ export default function Problem() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.6 }}
                         >
-                            <h4 className="text-lg font-semibold tracking-tight text-white">Transparencia Total</h4>
-                            <p className="mt-2 text-sm text-neutral-400">Tarifas claras desde el inicio. Sin costos ocultos. Sabes exactamente cuánto ganas.</p>
+                            <h4 className="text-base sm:text-lg font-semibold tracking-tight text-white">Transparencia Total</h4>
+                            <p className="mt-2 text-xs sm:text-sm text-neutral-400">Tarifas claras desde el inicio. Sin costos ocultos. Sabes exactamente cuánto ganas.</p>
                         </motion.div>
                     </div>
 

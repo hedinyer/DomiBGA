@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   description: "La revolución de entrega con 0% de comisión. Más rápido, más barato, más justo.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/herosection/vecteezy_a-parcel-delivery-worker-dressed-in-a-red-uniform-is-holding_24842634.mp4"
+          as="video"
+          type="video/mp4"
+        />
+      </head>
       <body
         className={`${spaceGrotesk.variable} ${syne.variable} antialiased bg-background text-foreground overflow-x-hidden`}
       >

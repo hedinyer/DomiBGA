@@ -22,7 +22,7 @@ export default function CouriersPage() {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
                     {[
-                        { label: "Ganancias de Hoy", value: "$142.50", icon: <TrendingUp className="text-green-400" /> },
+                        { label: "Ganancias de Hoy", value: "$142.500", icon: <TrendingUp className="text-green-400" /> },
                         { label: "Entregas", value: "18", icon: <MapPin className="text-blue-400" /> },
                         { label: "Racha", value: "5 Días", icon: <Zap className="text-yellow-400" /> },
                         { label: "Nivel", value: "42", icon: <Trophy className="text-purple-400" /> },
@@ -51,7 +51,7 @@ export default function CouriersPage() {
                         <div className="space-y-6">
                             {[
                                 { title: "Demonio de la Velocidad", desc: "Completa 5 entregas en < 20min", progress: 80, reward: "+500 XP" },
-                                { title: "Guerrero de Lluvia", desc: "Entrega durante mal clima", progress: 30, reward: "+$20 Bono" },
+                                { title: "Guerrero de Lluvia", desc: "Entrega durante mal clima", progress: 30, reward: "+$20.000 Bono" },
                                 { title: "Racha de Fin de Semana", desc: "Trabaja Sáb & Dom", progress: 100, reward: "Desbloqueado" },
                             ].map((quest, i) => (
                                 <div key={i} className="bg-black/40 p-4 rounded-xl border border-white/5">

@@ -148,4 +148,19 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold uppercase tracking-tighter;
   }
+
+  /* Mobile optimizations */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button, a {
+    touch-action: manipulation;
+  }
+
+  /* Prevent text size adjustment on iOS */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 }

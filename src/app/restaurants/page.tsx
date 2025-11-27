@@ -10,13 +10,13 @@ import { GripVertical, Plus, Trash2 } from "lucide-react";
 
 // --- Mock Data ---
 const revenueData = [
-    { name: "Lun", value: 4000 },
-    { name: "Mar", value: 3000 },
-    { name: "Mié", value: 5000 },
-    { name: "Jue", value: 2780 },
-    { name: "Vie", value: 1890 },
-    { name: "Sáb", value: 2390 },
-    { name: "Dom", value: 3490 },
+    { name: "Lun", value: 4000000 },
+    { name: "Mar", value: 3000000 },
+    { name: "Mié", value: 5000000 },
+    { name: "Jue", value: 2780000 },
+    { name: "Vie", value: 1890000 },
+    { name: "Sáb", value: 2390000 },
+    { name: "Dom", value: 3490000 },
 ];
 
 // --- Sortable Item Component ---
@@ -47,9 +47,9 @@ function SortableItem(props: any) {
 export default function RestaurantsPage() {
     // --- State ---
     const [menuItems, setMenuItems] = useState([
-        { id: "1", name: "Hamburguesa Cyber", price: "15.00" },
-        { id: "2", name: "Papas Fritas Void", price: "5.00" },
-        { id: "3", name: "Agua Glitch", price: "3.00" },
+        { id: "1", name: "Hamburguesa Cyber", price: "15.000" },
+        { id: "2", name: "Papas Fritas Void", price: "5.000" },
+        { id: "3", name: "Agua Glitch", price: "3.000" },
     ]);
 
     const sensors = useSensors(
@@ -108,11 +108,12 @@ export default function RestaurantsPage() {
                             <ResponsiveContainer width="100%" height="100%">
                                 <BarChart data={revenueData}>
                                     <XAxis dataKey="name" stroke="#666" fontSize={12} tickLine={false} axisLine={false} />
-                                    <YAxis stroke="#666" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `$${value}`} />
+                                    <YAxis stroke="#666" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `$${value.toLocaleString('es-CO')}`} />
                                     <Tooltip
                                         contentStyle={{ backgroundColor: '#000', border: '1px solid #333', borderRadius: '8px' }}
                                         itemStyle={{ color: '#fff' }}
                                         cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                                        formatter={(value: number) => `$${value.toLocaleString('es-CO')}`}
                                     />
                                     <Bar dataKey="value" fill="#00ff41" radius={[4, 4, 0, 0]} />
                                 </BarChart>
@@ -126,11 +127,11 @@ export default function RestaurantsPage() {
                             </div>
                             <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
                                 <p className="text-gray-400 text-xs uppercase mb-1">Ingresos</p>
-                                <p className="text-2xl font-bold text-primary">$45k</p>
+                                <p className="text-2xl font-bold text-primary">$45.000.000</p>
                             </div>
                             <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
                                 <p className="text-gray-400 text-xs uppercase mb-1">Ahorro</p>
-                                <p className="text-2xl font-bold text-green-400">$12k</p>
+                                <p className="text-2xl font-bold text-green-400">$12.000.000</p>
                             </div>
                         </div>
                     </div>
